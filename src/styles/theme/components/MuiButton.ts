@@ -19,6 +19,7 @@ const styles = ({ palette }: Theme): MuiButton => ({
 			"&:hover": {
 				backgroundColor: palette.primary.dark,
 			},
+			padding: "10px 20px",
 		},
 
 		outlined: {

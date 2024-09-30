@@ -1,3 +1,5 @@
+"use client";
+
 import { CssBaseline, ThemeProvider as MUIThemeProvider } from "@mui/material";
 import type { ReactNode } from "react";
 import { ThemeSelector, theme } from "./theme";
