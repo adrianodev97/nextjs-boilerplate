@@ -1,14 +1,16 @@
 "use client";
 
+import { useAppSelector } from "@/store/hooks";
+import { themeModeSelector } from "@/store/themeModeReducers/slice";
 import { CssBaseline, ThemeProvider as MUIThemeProvider } from "@mui/material";
 import type { ReactNode } from "react";
 import { ThemeSelector, theme } from "./theme";
-import type { IThemeMode } from "./types";
 
 export const ThemeProviderWithMode = ({
 	children,
-	themeMode,
-}: { children: ReactNode; themeMode: IThemeMode }) => {
+}: { children: ReactNode }) => {
+	const themeMode = useAppSelector(themeModeSelector);
+
 	return (
 		<MUIThemeProvider theme={ThemeSelector(themeMode)}>
 			<CssBaseline />

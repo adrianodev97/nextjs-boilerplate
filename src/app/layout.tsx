@@ -1,3 +1,4 @@
+import ReduxProvider from "@/store/provider";
 import { ThemeProviderWithMode } from "@/styles/theme";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
@@ -26,9 +27,9 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
-				<ThemeProviderWithMode themeMode="light">
-					{children}
-				</ThemeProviderWithMode>
+				<ReduxProvider>
+					<ThemeProviderWithMode>{children}</ThemeProviderWithMode>
+				</ReduxProvider>
 			</body>
 		</html>
 	);
