@@ -24,7 +24,7 @@ export default function Home() {
 	const { title, body } = useAppSelector(jsonPlaceholderSelector);
 
 	const handleThemeChange = () => {
-		dispatch(themeModeActions.toggleThemeMode());
+		dispatch(themeModeActions.toggleThemeMode({}));
 	};
 
 	useEffect(() => {
