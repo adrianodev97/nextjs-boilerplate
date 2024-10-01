@@ -12,6 +12,7 @@ import {
 	Button,
 	Container,
 	Grid2 as Grid,
+	Skeleton,
 	Switch,
 	Typography,
 } from "@mui/material";
@@ -21,7 +22,9 @@ export default function Home() {
 	const dispatch = useAppDispatch();
 
 	const mode = useAppSelector(themeModeSelector);
-	const { title, body } = useAppSelector(jsonPlaceholderSelector);
+	const { title, body, status } = useAppSelector(jsonPlaceholderSelector);
+
+	const loading = status === "pending" || status === "idle";
 
 	const handleThemeChange = () => {
 		dispatch(themeModeActions.toggleThemeMode({}));
@@ -57,9 +60,12 @@ export default function Home() {
 						textAlign={"center"}
 					>
 						<Typography variant="h4" component="h1" gutterBottom>
-							{title}
+							{loading ? <Skeleton animation={"wave"} /> : title}
 						</Typography>
-						<Typography variant="body1">{body}</Typography>
+
+						<Typography variant="body1">
+							{loading ? <Skeleton animation={"wave"} /> : body}
+						</Typography>
 						<Box marginX={"auto"}>
 							<Button variant="contained" color="primary">
 								Button Overrides
