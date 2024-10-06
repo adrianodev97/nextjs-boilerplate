@@ -1,6 +1,6 @@
 "use client";
 
-import api from "@/api";
+import api from "@/helpers/fetchApi";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const getPostByIdRequest = createAsyncThunk(
