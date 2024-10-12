@@ -1,10 +1,12 @@
+import Header from "@/components/Header";
+import { getDictionary } from "@/helpers/getDictionary";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { getDictionary } from "./dictionaries";
+import type { IParams } from "../types";
 
 export async function generateMetadata({
 	params: { lang },
-}: { params: { lang: "en-us" | "pt-br" } }): Promise<Metadata> {
+}: { params: IParams }): Promise<Metadata> {
 	const { metatags } = await getDictionary(lang);
 
 	return {
@@ -19,5 +21,10 @@ interface LayoutProps {
 }
 
 export default function DashboardLayout({ children }: Readonly<LayoutProps>) {
-	return <section>{children}</section>;
+	return (
+		<>
+			<Header />
+			{children}
+		</>
+	);
 }

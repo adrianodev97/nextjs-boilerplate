@@ -5,5 +5,9 @@
     "keywords": [
       "Palavras-chave"
     ]
+  },
+  "content": {
+    "title": "Bem-vindo ao boilerplate MUI V6 usando NextJs",
+    "button": "Saiba mais"
   }
 }

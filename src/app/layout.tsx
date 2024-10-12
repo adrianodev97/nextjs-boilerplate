@@ -1,3 +1,4 @@
+import { defaultLocale } from "@/helpers/languages";
 import ReduxProvider from "@/store/provider";
 import { ThemeProviderWithMode } from "@/styles/theme";
 import localFont from "next/font/local";
@@ -19,7 +20,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en-US">
+		<html lang={defaultLocale.format}>
 			<body className={`${geistSans.variable} ${geistMono.variable}`}>
 				<ReduxProvider>
 					<ThemeProviderWithMode>{children}</ThemeProviderWithMode>
