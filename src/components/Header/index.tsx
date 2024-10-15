@@ -1,45 +1,9 @@
-"use client";
+import { AppBar, Box, Button, Container, Typography } from "@mui/material";
 
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
-import MenuIcon from "@mui/icons-material/Menu";
-
-import {
-	AppBar,
-	Box,
-	Button,
-	Container,
-	Divider,
-	Drawer,
-	IconButton,
-	MenuItem,
-	Toolbar,
-	Typography,
-} from "@mui/material";
-
-import { alpha, styled } from "@mui/material/styles";
-import * as React from "react";
-
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-	display: "flex",
-	alignItems: "center",
-	justifyContent: "space-between",
-	flexShrink: 0,
-	borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
-	backdropFilter: "blur(24px)",
-	border: "1px solid",
-	borderColor: theme.palette.divider,
-	backgroundColor: alpha(theme.palette.background.default, 0.4),
-	boxShadow: theme.shadows[1],
-	padding: "8px 12px",
-}));
+import MenuMobile from "./components/MenuMobile";
+import { StyledNavButton, StyledToolbar } from "./styles";
 
 export default function Header() {
-	const [open, setOpen] = React.useState(false);
-
-	const toggleDrawer = (newOpen: boolean) => () => {
-		setOpen(newOpen);
-	};
-
 	return (
 		<>
 			<AppBar
@@ -48,46 +12,44 @@ export default function Header() {
 					boxShadow: 0,
 					bgcolor: "transparent",
 					backgroundImage: "none",
-					mt: 10,
+					mt: 3,
 				}}
 			>
 				<Container maxWidth="lg">
 					<StyledToolbar variant="dense" disableGutters>
-						<Box
-							sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}
-						>
-							<Typography variant="h6" component="div" color="primary">
-								Logo
-							</Typography>
-							<Box sx={{ display: { xs: "none", md: "flex" } }}>
-								<Button variant="text" color="info" size="small">
+						<Typography variant="h6" component="div" color="primary">
+							Logo
+						</Typography>
+						<Box sx={{ display: "flex", alignItems: "center", px: 0 }}>
+							<Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
+								<StyledNavButton variant="text" color="info" size="small">
 									Features
-								</Button>
-								<Button variant="text" color="info" size="small">
+								</StyledNavButton>
+								<StyledNavButton variant="text" color="info" size="small">
 									Testimonials
-								</Button>
-								<Button variant="text" color="info" size="small">
+								</StyledNavButton>
+								<StyledNavButton variant="text" color="info" size="small">
 									Highlights
-								</Button>
-								<Button variant="text" color="info" size="small">
+								</StyledNavButton>
+								<StyledNavButton variant="text" color="info" size="small">
 									Pricing
-								</Button>
-								<Button
+								</StyledNavButton>
+								<StyledNavButton
 									variant="text"
 									color="info"
 									size="small"
 									sx={{ minWidth: 0 }}
 								>
 									FAQ
-								</Button>
-								<Button
+								</StyledNavButton>
+								<StyledNavButton
 									variant="text"
 									color="info"
 									size="small"
 									sx={{ minWidth: 0 }}
 								>
 									Blog
-								</Button>
+								</StyledNavButton>
 							</Box>
 						</Box>
 						<Box
@@ -104,43 +66,7 @@ export default function Header() {
 								Sign up
 							</Button>
 						</Box>
-						<Box sx={{ display: { sm: "flex", md: "none" } }}>
-							<IconButton aria-label="Menu button" onClick={toggleDrawer(true)}>
-								<MenuIcon />
-							</IconButton>
-							<Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
-								<Box sx={{ p: 2, backgroundColor: "background.default" }}>
-									<Box
-										sx={{
-											display: "flex",
-											alignItems: "center",
-											justifyContent: "space-between",
-										}}
-									>
-										<IconButton onClick={toggleDrawer(false)}>
-											<CloseRoundedIcon />
-										</IconButton>
-									</Box>
-									<Divider sx={{ my: 3 }} />
-									<MenuItem>Features</MenuItem>
-									<MenuItem>Testimonials</MenuItem>
-									<MenuItem>Highlights</MenuItem>
-									<MenuItem>Pricing</MenuItem>
-									<MenuItem>FAQ</MenuItem>
-									<MenuItem>Blog</MenuItem>
-									<MenuItem>
-										<Button color="primary" variant="contained" fullWidth>
-											Sign up
-										</Button>
-									</MenuItem>
-									<MenuItem>
-										<Button color="primary" variant="outlined" fullWidth>
-											Sign in
-										</Button>
-									</MenuItem>
-								</Box>
-							</Drawer>
-						</Box>
+						<MenuMobile />
 					</StyledToolbar>
 				</Container>
 			</AppBar>

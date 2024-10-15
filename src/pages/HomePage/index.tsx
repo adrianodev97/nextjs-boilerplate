@@ -19,7 +19,7 @@ import {
 import { useEffect } from "react";
 import type { IHomePageProps } from "./types";
 
-export default function Home({ content }: Readonly<IHomePageProps>) {
+const HomePage = ({ content }: Readonly<IHomePageProps>) => {
 	const dispatch = useAppDispatch();
 
 	const mode = useAppSelector(themeModeSelector);
@@ -77,4 +77,6 @@ export default function Home({ content }: Readonly<IHomePageProps>) {
 			</Container>
 		</main>
 	);
-}
+};
+
+export default HomePage;
