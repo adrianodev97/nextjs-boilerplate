@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import { Provider } from "react-redux";
 
-import store from "./store"; // Adjust the import path as necessary
+import store from "./store";
 
 interface ReduxProviderProps {
 	children: ReactNode;

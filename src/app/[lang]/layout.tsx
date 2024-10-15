@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/_components/Header";
 import { getDictionary } from "@/helpers/getDictionary";
 import type { IPageDictionary } from "@/helpers/getDictionary/types";
 import type { Metadata } from "next";
