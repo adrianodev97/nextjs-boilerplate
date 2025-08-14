@@ -1,7 +1,5 @@
 # Next.js Boilerplate with MUI and Redux Toolkit
 
- 
-
 This project is a boilerplate for building applications with Next.js v14, Material-UI (MUI), and Redux Toolkit. It includes a theme configuration with both dark and light modes, as well as a single theme configuration. The project also uses BiomeJS as a linter and formatter.
 
 ## Features
