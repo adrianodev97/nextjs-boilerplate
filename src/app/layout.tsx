@@ -2,16 +2,19 @@ import type { Metadata } from "next";
 import { lazy } from "react";
 import "@/styles/global.css";
 
+// Used to control the global state of the application
 const ReduxProvider = lazy(async () => {
 	const myModule = await import("@/store/provider");
 	return { default: myModule.default };
 });
 
+// Theme with mode (light/dark)
 const ThemeProvider = lazy(async () => {
 	const myModule = await import("@/styles/theme");
 	return { default: myModule.ThemeProvider };
 });
 
+// Theme without mode - could be used for pages that don't need a theme
 const ThemeProviderWithMode = lazy(async () => {
 	const myModule = await import("@/styles/theme");
 	return { default: myModule.ThemeProviderWithoutMode };
@@ -20,7 +23,7 @@ const ThemeProviderWithMode = lazy(async () => {
 export const metadata: Metadata = {
 	title: "NextJS Boilerplate",
 	description: "Boilerplate for NextJS using MUI V6 and Redux",
-	// icons: [{ rel: "icon", url: "/favicon.ico" }],
+	// icons: [{ rel: "icon", url: "/favicon.ico" }], // TODO: Add favicon
 };
 
 export default function RootLayout({
