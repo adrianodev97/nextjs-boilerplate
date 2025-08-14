@@ -1,0 +1,213 @@
+{
+	"metatags": {
+		"title": "Diflux",
+		"description": "Descrição",
+		"keywords": [
+			"Palavras-chave"
+		]
+	},
+	"content": {
+		"header": {
+			"navItems": [
+				{
+					"label": "Home",
+					"scrollId": "home"
+				},
+				{
+					"label": "About",
+					"scrollId": "about"
+				},
+				{
+					"label": "Contact",
+					"scrollId": "contact"
+				}
+			]
+		},
+		"hero": {
+			"title": "Transformamos ideias em realidade digital",
+			"description": "Desenvolvemos soluções web inovadoras que impulsionam seu negócio para o próximo nível",
+			"image": {
+				"src": "https://picsum.photos/600/400",
+				"alt": "Build faster",
+				"width": 600,
+				"height": 400
+			},
+			"buttons": [
+				{
+					"label": "Get started",
+					"href": "/",
+					"variant": "contained",
+					"color": "primary"
+				},
+				{
+					"label": "Learn more",
+					"scrollId": "about",
+					"variant": "outlined",
+					"color": "primary"
+				}
+			]
+		},
+		"ourServices": {
+			"title": "Our Services",
+			"cards": [
+				{
+					"title": "Sites Institucionais",
+					"icon": "Globe",
+					"description": "Desenvolvimento de sites profissionais e responsivos para sua empresa"
+				},
+				{
+					"title": "Landing Pages",
+					"icon": "Rocket",
+					"description": "Pages otimizadas para conversão e resultados"
+				},
+				{
+					"title": "Sistemas Web",
+					"icon": "Web",
+					"description": "Desenvolvimento de aplicações web personalizadas"
+				},
+				{
+					"title": "Correção de Sites",
+					"icon": "Tools",
+					"description": "Manutenção e otimização de sites existentes"
+				},
+				{
+					"title": "Design UI/UX",
+					"icon": "Palette",
+					"description": "Design moderno e experiência do usuário excepcional"
+				},
+				{
+					"title": "SEO",
+					"icon": "Search",
+					"description": "Otimização para mecanismos de busca"
+				}
+			]
+		},
+		"title": "Bem-vindo ao boilerplate MUI V6 usando NextJs",
+		"button": "Saiba mais",
+		"contact": {
+			"title": "Entre em contato com nossa",
+			"titleHighlight": "Equipe",
+			"form": {
+				"labels": {
+					"name": "Nome",
+					"email": "E-mail",
+					"phone": "Telefone",
+					"message": "Mensagem"
+				},
+				"errors": {
+					"name": "Nome é obrigatório",
+					"email": "E-mail inválido",
+					"phone": "Número de telefone inválido",
+					"message": "Mensagem deve ter pelo menos 10 caracteres"
+				},
+				"placeholders": {
+					"name": "Digite seu nome",
+					"email": "Digite seu e-mail",
+					"phone": "Digite seu telefone",
+					"message": "Digite sua mensagem"
+				},
+				"submitButton": "Enviar mensagem"
+			}
+		},
+		"ourTechnologies": {
+			"title": "Nossas Tecnologias",
+			"description": "Construído com tecnologias de ponta para performance ideal",
+			"technologies": [
+				{
+					"name": "React",
+					"description": "Biblioteca JavaScript para construção de interfaces",
+					"icon": "react"
+				},
+				{
+					"name": "Next.js",
+					"description": "Framework React para produção",
+					"icon": "nextjs"
+				},
+				{
+					"name": "TypeScript",
+					"description": "JavaScript com tipagem estática",
+					"icon": "typescript"
+				},
+				{
+					"name": "Material UI",
+					"description": "Biblioteca de componentes React",
+					"icon": "mui"
+				},
+				{
+					"name": "Node.js",
+					"description": "Runtime JavaScript",
+					"icon": "nodejs"
+				}
+			]
+		},
+		"portfolio": {
+			"title": "Nosso Portfólio",
+			"projects": [
+				{
+					"id": 1,
+					"title": "Plataforma E-commerce",
+					"description": "Sistema completo de e-commerce com integração de pagamentos",
+					"link": "/portfolio/ecommerce"
+				},
+				{
+					"id": 2,
+					"title": "Site Corporativo",
+					"description": "Site institucional responsivo com blog integrado",
+					"link": "/portfolio/corporate"
+				},
+				{
+					"id": 3,
+					"title": "Dashboard de Aplicativo",
+					"description": "Dashboard administrativo com análise de dados",
+					"link": "/portfolio/dashboard"
+				}
+			]
+		},
+		"trustIndicators": {
+			"items": [
+				{
+					"title": "Projetos Entregues",
+					"value": 1000
+				},
+				{
+					"title": "Garantia de SEO",
+					"value": 95
+				},
+				{
+					"title": "Países atendidos",
+					"value": 5
+				}
+			]
+		},
+		"frequentlyQuestions": {
+			"title": "Perguntas Frequentes",
+			"subtitle": "Respostas para as dúvidas mais comuns sobre nossos serviços",
+			"questions": [
+				{
+					"question": "Qual o prazo médio de desenvolvimento?",
+					"answer": "O prazo varia de acordo com a complexidade do projeto, geralmente entre 4-12 semanas."
+				},
+				{
+					"question": "Como funciona o processo de desenvolvimento?",
+					"answer": "Trabalhamos em etapas: briefing, planejamento, design, desenvolvimento, testes e lançamento."
+				},
+				{
+					"question": "Oferecem suporte após o lançamento?",
+					"answer": "Sim, oferecemos planos de manutenção e suporte contínuo após o lançamento."
+				}
+			]
+		},
+		"footerBanner": {
+			"title": "Pronto para transformar suas ideias em realidade?",
+			"description": "Vamos criar algo incrível juntos.",
+			"primaryButton": {
+				"text": "Fale Conosco",
+				"href": "/contact"
+			},
+			"secondaryButton": {
+				"text": "Ver Projetos",
+				"href": "/portfolio"
+			}
+		}
+	}
+}
