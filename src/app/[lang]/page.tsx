@@ -1,3 +1,5 @@
+import { Container } from "@mui/material";
+import ClientComponent from "@/components/ClientComponent";
 import { getDictionary } from "@/helpers/getDictionary";
 import type { IPageDictionary } from "@/helpers/getDictionary/types";
 import type { IServerPageProps } from "../types";
@@ -11,5 +13,11 @@ export default async function Home({ params }: IServerPageProps) {
 		content: {},
 	} = dictionary as IHomePageProps;
 
-	return <main></main>;
+	return (
+		<main>
+			<Container>
+				<ClientComponent />
+			</Container>
+		</main>
+	);
 }
