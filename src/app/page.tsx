@@ -11,7 +11,7 @@ import {
 	Box,
 	Button,
 	Container,
-	Grid2 as Grid,
+	Grid,
 	Skeleton,
 	Switch,
 	Typography,
