@@ -5,7 +5,7 @@ import palette from "./palette";
 import type { IThemeMode } from "./types";
 import typography from "./typography";
 
-export const ThemeSelector = (mode: IThemeMode) => {
+export const ThemeSelector = (mode: IThemeMode = "light") => {
 	const baseTheme = createTheme({
 		palette: palette(mode),
 		typography,
@@ -21,3 +21,4 @@ export const ThemeSelector = (mode: IThemeMode) => {
 
 	return theme;
 };
+

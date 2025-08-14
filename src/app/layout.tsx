@@ -14,7 +14,7 @@ const ThemeProvider = lazy(async () => {
 
 const ThemeProviderWithMode = lazy(async () => {
 	const myModule = await import("@/styles/theme");
-	return { default: myModule.ThemeProviderWithMode };
+	return { default: myModule.ThemeProviderWithoutMode };
 });
 
 export const metadata: Metadata = {

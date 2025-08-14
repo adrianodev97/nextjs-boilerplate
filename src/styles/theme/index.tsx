@@ -56,6 +56,7 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 export const ThemeProviderWithoutMode = ({
 	children,
 }: { children: ReactNode }) => {
+	const theme = ThemeSelector();
 	return (
 		<MUIThemeProvider theme={theme}>
 			<CssBaseline />
