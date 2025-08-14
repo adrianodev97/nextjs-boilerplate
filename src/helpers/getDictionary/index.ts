@@ -5,16 +5,12 @@ import type { IDictionaries } from "./types";
 const dictionaries: IDictionaries = {
 	"en-us": {
 		home: () =>
-			import("@diflux/dictionaries/en-us/home.json").then(
-				(module) => module.default,
-			),
+			import("@/dictionaries/en-us/home.json").then((module) => module.default),
 	},
 
 	"pt-br": {
 		home: () =>
-			import("@diflux/dictionaries/pt-br/home.json").then(
-				(module) => module.default,
-			),
+			import("@/dictionaries/pt-br/home.json").then((module) => module.default),
 	},
 };
 
