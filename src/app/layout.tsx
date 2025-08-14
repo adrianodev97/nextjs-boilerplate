@@ -23,7 +23,7 @@ const ThemeProviderWithMode = lazy(async () => {
 export const metadata: Metadata = {
 	title: "NextJS Boilerplate",
 	description: "Boilerplate for NextJS using MUI V6 and Redux",
-	// icons: [{ rel: "icon", url: "/favicon.ico" }], // TODO: Add favicon
+	icons: [{ rel: "icon", url: "/favicon.ico" }]
 };
 
 export default function RootLayout({
