@@ -2,8 +2,7 @@ import { Container } from "@mui/material";
 import ClientComponent from "@/components/ClientComponent";
 import { getDictionary } from "@/helpers/getDictionary";
 import type { IPageDictionary } from "@/helpers/getDictionary/types";
-import type { IServerPageProps } from "../types";
-import type { IHomePageProps } from "./types";
+import type { IHomePageProps, IServerPageProps } from "./types";
 
 export default async function Home({ params }: IServerPageProps) {
 	const { lang } = await params;
