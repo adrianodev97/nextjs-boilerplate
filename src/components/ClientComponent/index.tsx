@@ -1,6 +1,7 @@
 "use client";
 
 import { Box, Button, Grid, Skeleton, Switch, Typography } from "@mui/material";
+import Link from "next/link";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { jsonPlaceholderSelector } from "@/store/jsonPlaceholderReducers/slice";
@@ -39,6 +40,10 @@ const index = () => {
 				<Typography variant="body1">
 					{mode === "light" ? "Light Mode" : "Dark Mode"}
 				</Typography>
+			</Grid>
+			<Grid size={12}>
+				<Link href="/pt-br">PT</Link>
+				<Link href="/en-us">En</Link>
 			</Grid>
 			<Grid
 				size={12}

@@ -1,10 +1,8 @@
 {
 	"metatags": {
-		"title": "Diflux",
+		"title": "Boilerplate",
 		"description": "Descrição",
-		"keywords": [
-			"Palavras-chave"
-		]
+		"keywords": ["Palavras-chave"]
 	},
 	"content": {
 		"header": {
