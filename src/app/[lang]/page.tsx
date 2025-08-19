@@ -8,7 +8,7 @@ export default async function Home({ params }: IServerPageProps) {
 	const { lang } = await params;
 	const dictionary = (await getDictionary(lang, "home")) as IPageDictionary;
 	const {
-		// biome-ignore lint/correctness/noEmptyPattern: <explanation>
+		// biome-ignore lint/correctness/noEmptyPattern: false positive
 		content: {},
 	} = dictionary as IHomePageProps;
 
