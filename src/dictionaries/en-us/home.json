@@ -1,0 +1,211 @@
+{
+	"metatags": {
+		"title": "Boilerplate",
+		"description": "Description",
+		"keywords": ["Keywords"]
+	},
+	"content": {
+		"header": {
+			"navItems": [
+				{
+					"label": "Home",
+					"scrollId": "home"
+				},
+				{
+					"label": "About",
+					"scrollId": "about"
+				},
+				{
+					"label": "Contact",
+					"scrollId": "contact"
+				}
+			]
+		},
+		"hero": {
+			"title": "Transforming ideas into digital reality",
+			"description": "We develop innovative web solutions that take your business to the next level",
+			"image": {
+				"src": "https://picsum.photos/600/400",
+				"alt": "Build faster",
+				"width": 600,
+				"height": 400
+			},
+			"buttons": [
+				{
+					"label": "Get started",
+					"href": "/",
+					"variant": "contained",
+					"color": "primary"
+				},
+				{
+					"label": "Learn more",
+					"scrollId": "about",
+					"variant": "outlined",
+					"color": "primary"
+				}
+			]
+		},
+		"ourServices": {
+			"title": "Our Services",
+			"cards": [
+				{
+					"title": "Institutional Sites",
+					"icon": "Globe",
+					"description": "Professional and responsive website development for your company"
+				},
+				{
+					"title": "Landing Pages",
+					"icon": "Rocket",
+					"description": "Optimized pages for conversion and results"
+				},
+				{
+					"title": "Web Systems",
+					"icon": "Web",
+					"description": "Customized web application development"
+				},
+				{
+					"title": "Website Fixing",
+					"icon": "Tools",
+					"description": "Maintenance and optimization of existing websites"
+				},
+				{
+					"title": "Design UI/UX",
+					"icon": "Palette",
+					"description": "Modern design and exceptional user experience"
+				},
+				{
+					"title": "SEO",
+					"icon": "Search",
+					"description": "Search engine optimization"
+				}
+			]
+		},
+		"title": "Welcome to the MUI V6 boilerplate using NextJs",
+		"button": "Know more",
+		"contact": {
+			"title": "Get in Touch with our",
+			"titleHighlight": "Team",
+			"form": {
+				"labels": {
+					"name": "Name",
+					"email": "Email",
+					"phone": "Phone",
+					"message": "Message"
+				},
+				"errors": {
+					"name": "Name is required",
+					"email": "Invalid email",
+					"phone": "Invalid phone number",
+					"message": "Message must be at least 10 characters"
+				},
+				"placeholders": {
+					"name": "Enter your name",
+					"email": "Enter your email",
+					"phone": "Enter your phone",
+					"message": "Enter your message"
+				},
+				"submitButton": "Send message"
+			}
+		},
+		"ourTechnologies": {
+			"title": "Our Technologies",
+			"description": "Built with cutting-edge technologies for optimal performance",
+			"technologies": [
+				{
+					"name": "React",
+					"description": "JavaScript library for building user interfaces",
+					"icon": "react"
+				},
+				{
+					"name": "Next.js",
+					"description": "Production React framework",
+					"icon": "nextjs"
+				},
+				{
+					"name": "TypeScript",
+					"description": "Typed JavaScript",
+					"icon": "typescript"
+				},
+				{
+					"name": "Material UI",
+					"description": "React components library",
+					"icon": "mui"
+				},
+				{
+					"name": "Node.js",
+					"description": "JavaScript runtime",
+					"icon": "nodejs"
+				}
+			]
+		},
+		"portfolio": {
+			"title": "Our Portfolio",
+			"projects": [
+				{
+					"id": 1,
+					"title": "E-commerce Platform",
+					"description": "Complete e-commerce system with payment integration",
+					"link": "/portfolio/ecommerce"
+				},
+				{
+					"id": 2,
+					"title": "Corporate Website",
+					"description": "Responsive institutional website with integrated blog",
+					"link": "/portfolio/corporate"
+				},
+				{
+					"id": 3,
+					"title": "App Dashboard",
+					"description": "Administrative dashboard with data analysis",
+					"link": "/portfolio/dashboard"
+				}
+			]
+		},
+		"trustIndicators": {
+			"items": [
+				{
+					"title": "Projects Delivered",
+					"value": 1000
+				},
+				{
+					"title": "SEO Guarantee",
+					"value": 95
+				},
+				{
+					"title": "Countries Served",
+					"value": 5
+				}
+			]
+		},
+		"frequentlyQuestions": {
+			"title": "Frequently Asked Questions",
+			"subtitle": "Answers to the most common questions about our services",
+			"questions": [
+				{
+					"question": "What is the average development time?",
+					"answer": "The timeline varies according to project complexity, typically between 4-12 weeks."
+				},
+				{
+					"question": "How does the development process work?",
+					"answer": "We work in stages: briefing, planning, design, development, testing, and launch."
+				},
+				{
+					"question": "Do you offer post-launch support?",
+					"answer": "Yes, we offer maintenance plans and continuous support after launch."
+				}
+			]
+		},
+		"footerBanner": {
+			"title": "Ready to transform your ideas into reality?",
+			"description": "Let's create something amazing together.",
+			"primaryButton": {
+				"text": "Contact Us",
+				"href": "/contact"
+			},
+			"secondaryButton": {
+				"text": "View Projects",
+				"href": "/portfolio"
+			}
+		}
+	}
+}

@@ -11,24 +11,19 @@ type MuiButton = {
 	variants?: ComponentsVariants["MuiButton"];
 };
 
-const styles = ({ palette }: Theme): MuiButton => ({
+const styles = ({ spacing, breakpoints }: Theme): MuiButton => ({
 	styleOverrides: {
-		contained: {
-			color: palette.common.white,
-			backgroundColor: palette.primary.main,
-			"&:hover": {
-				backgroundColor: palette.primary.dark,
+		root: {
+			padding: spacing(2, 3),
+			borderRadius: spacing(1),
+			whiteSpace: "nowrap",
+			textTransform: "capitalize",
+			[breakpoints.only("xs")]: {
+				width: "100%",
 			},
-			padding: "10px 20px",
 		},
-
 		outlined: {
-			color: palette.text.primary,
-			border: "1px solid rgba(0, 0, 0, 0.23)",
-			"&:hover": {
-				backgroundColor: palette.background.default,
-				border: "1px solid rgba(0, 0, 0, 0.23)",
-			},
+			maxHeight: "52px",
 		},
 	},
 });

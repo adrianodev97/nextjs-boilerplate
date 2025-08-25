@@ -6,37 +6,57 @@ import {
 	themeModeSelector,
 } from "@/store/themeModeReducers/slice";
 import { CssBaseline, ThemeProvider as MUIThemeProvider } from "@mui/material";
-import { type ReactNode, useEffect } from "react";
-import { ThemeSelector, theme } from "./theme";
+import { type ReactNode, useEffect, useMemo, useState } from "react";
+import { ThemeSelector } from "./theme";
 import type { IThemeMode } from "./types";
 
-export const ThemeProviderWithMode = ({
-	children,
-}: { children: ReactNode }) => {
+export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 	const dispatch = useAppDispatch();
 
+	const [isLoading, setLoading] = useState(true);
 	const themeMode = useAppSelector(themeModeSelector);
 
 	useEffect(() => {
+		const userPrefersDark = window.matchMedia(
+			"(prefers-color-scheme: dark)",
+		).matches;
+
 		const localThemeMode = window.localStorage.getItem(
 			"themeMode",
 		) as IThemeMode;
+
 		if (localThemeMode) {
 			dispatch(themeModeActions.toggleThemeMode({ mode: localThemeMode }));
+		} else {
+			const newTheme = userPrefersDark ? "dark" : "light";
+			dispatch(themeModeActions.toggleThemeMode({ mode: newTheme }));
 		}
+
+		setLoading(false);
 	}, [dispatch]);
 
+	const themeObject = useMemo(
+		() => ThemeSelector(themeMode as IThemeMode),
+		[themeMode],
+	);
+
+	if (isLoading) {
+		return null;
+	}
+
 	return (
-		<MUIThemeProvider theme={ThemeSelector(themeMode)}>
+		<MUIThemeProvider theme={themeObject}>
 			<CssBaseline />
 			{children}
 		</MUIThemeProvider>
 	);
 };
 
+
 export const ThemeProviderWithoutMode = ({
 	children,
 }: { children: ReactNode }) => {
+	const theme = ThemeSelector();
 	return (
 		<MUIThemeProvider theme={theme}>
 			<CssBaseline />

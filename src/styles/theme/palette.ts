@@ -3,34 +3,22 @@ import type { IThemeMode } from "./types";
 
 export const lightPalette: PaletteOptions = {
 	primary: {
-		main: "#11F8D6",
-		light: "#46FDE2",
-		dark: "#04D3B4",
+		main: "#7928ca",
 	},
 	secondary: {
-		main: "#BFD4ED",
-		light: "#DBECFF",
-		dark: "#AEC6E1",
+		main: "#ff0080",
 	},
 	error: {
-		main: "#F64F77",
-		light: "#FC6F91",
-		dark: "#DE3961",
+		main: "#EF4444",
 	},
 	warning: {
-		main: "#F8AE3F",
-		light: "#FFD569",
-		dark: "#F49F1F",
+		main: "#F59E0B",
 	},
 	info: {
-		main: "#0288D1",
-		light: "#03A9F4",
-		dark: "#01579B",
+		main: "#2196F3",
 	},
 	success: {
-		main: "#4BB543",
-		light: "#93EE8D",
-		dark: "#22801C",
+		main: "#4CAF50",
 	},
 	grey: {
 		"50": "#fafafa",
@@ -45,45 +33,34 @@ export const lightPalette: PaletteOptions = {
 		"900": "#212121",
 	},
 	background: {
-		default: "#ffffff",
-		paper: "#f5f5f5",
+		default: "#F9FAFB",
+		paper: "#E5E7EB",
+		secondary: "#D1D5DB",
 	},
 	text: {
-		primary: "#212121",
-		secondary: "#5F5C6B",
+		primary: "#333333",
+		secondary: "#666666",
 	},
 };
 
 export const darkPalette: PaletteOptions = {
 	primary: {
-		main: "#BB86FC",
-		light: "#D0A1FF",
-		dark: "#9A67EA",
+		main: "#6E05EE",
 	},
 	secondary: {
-		main: "#03DAC6",
-		light: "#66FFF9",
-		dark: "#00B3A6",
+		main: "#ff0080",
 	},
 	error: {
-		main: "#CF6679",
-		light: "#FF8A9E",
-		dark: "#B00020",
+		main: "#EF4444",
 	},
 	warning: {
-		main: "#FBC02D",
-		light: "#FFF263",
-		dark: "#C49000",
+		main: "#F59E0B",
 	},
 	info: {
 		main: "#2196F3",
-		light: "#6EC6FF",
-		dark: "#0069C0",
 	},
 	success: {
 		main: "#4CAF50",
-		light: "#80E27E",
-		dark: "#087F23",
 	},
 	grey: {
 		"50": "#fafafa",
@@ -98,13 +75,15 @@ export const darkPalette: PaletteOptions = {
 		"900": "#212121",
 	},
 	background: {
-		default: "#121212",
-		paper: "#1E1E1E",
+		default: "#161616",
+		paper: "#2A2A2A",
+		secondary: "#1A1A24",
 	},
 	text: {
-		primary: "#E0E0E0",
-		secondary: "#B0B0B0",
+		primary: "#FFFFFF",
+		secondary: "#969799",
 	},
+	divider: "#E5E7EB",
 };
 
 const palette = (mode: IThemeMode) =>
